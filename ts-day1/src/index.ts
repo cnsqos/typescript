@@ -71,3 +71,25 @@ console.log(`Any 값 : ${randomValue}`)
 // let data: any = 123;
 // console.log(data.toUpperCase());
 
+// 7. Null & Undefined
+// 오직 해당 타입의 값만 가질 수 있다.
+let u : undefined = undefined;
+let n : null = null;
+
+//u = 100;
+
+//함수의 매개변수와 반환값에 타입을 정한다.
+
+function calculator(num1:number, num2:number):number{
+    return num1 + num2
+}
+
+let result:number = calculator(10,20);
+console.log(`합계 : ${result}`);
+
+//반환타입이 없는 함수 (void)
+function logMessage(message: string): void{
+    console.log(`[메시지] ${message}`);
+}
+
+logMessage("함수 실행 완료");

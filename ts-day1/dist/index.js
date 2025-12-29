@@ -45,3 +45,19 @@ console.log(`Any 값 : ${randomValue}`);
 // 해당 타입에 없는 메서드를 호출해도 에러가 나지 않기 때문에 런타임 시 '함수가 아닙니다' 오류가 발생할 가능성이 크다.
 // let data: any = 123;
 // console.log(data.toUpperCase());
+// 7. Null & Undefined
+// 오직 해당 타입의 값만 가질 수 있다.
+let u = undefined;
+let n = null;
+//u = 100;
+//함수의 매개변수와 반환값에 타입을 정한다.
+function calculator(num1, num2) {
+    return num1 + num2;
+}
+let result = calculator(10, 20);
+console.log(`합계 : ${result}`);
+//반환타입이 없는 함수 (void)
+function logMessage(message) {
+    console.log(`[메시지] ${message}`);
+}
+logMessage("함수 실행 완료");
