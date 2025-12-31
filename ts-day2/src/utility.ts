@@ -59,8 +59,9 @@ interface Product {
   price: number;
 }
 
-// 2. DeliveryMethod 유니온 타입 정의
+// 2. DeliveryMethod 유니온 타입을 사용 오타와 잘못된 값을 원천 차단
 type DeliveryMethod = '택배' | '방문수령' | '새벽배송';
+
 
 // 3. ProductDetail 인터페이스 정의 (Product 상속)
 interface ProductDetail extends Product {
@@ -78,3 +79,5 @@ const myProduct: ProductDetail = {
   delivery: '택배',
   stock: 25,
 };
+
+
