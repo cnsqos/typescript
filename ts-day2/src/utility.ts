@@ -50,3 +50,31 @@ const greeting: UpperGreeting = "HELLO, WORLD";
 
 // 타입을 정의한 후 myProduct 제품 한개를 정의한다.
 // id: 101
+
+
+// 1. Product 인터페이스 정의
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+}
+
+// 2. DeliveryMethod 유니온 타입 정의
+type DeliveryMethod = '택배' | '방문수령' | '새벽배송';
+
+// 3. ProductDetail 인터페이스 정의 (Product 상속)
+interface ProductDetail extends Product {
+  description: string;
+  delivery: DeliveryMethod;
+  stock: number;
+}
+
+// myProduct 제품 한 개 정의
+const myProduct: ProductDetail = {
+  id: 101,
+  name: '무선 키보드',
+  price: 45000,
+  description: '조용하고 가벼운 무선 키보드입니다.',
+  delivery: '택배',
+  stock: 25,
+};
